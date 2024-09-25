@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
     exit(); // Detiene la ejecución
 }
 
-include '../DB/db.php'; // Incluye la conexión a la base de datos
+include '../../DB/db.php'; // Incluye la conexión a la base de datos
 
 // Consulta para obtener el total de usuarios registrados
 $sqlUsuarios = "SELECT COUNT(*) AS total_usuarios FROM users";
@@ -36,8 +36,8 @@ $conn->close(); // Cierra la conexión a la base de datos
     <meta charset="UTF-8"> <!-- Define la codificación de caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
     <title>Panel de Administración</title> <!-- Título de la página -->
-    <link rel="stylesheet" href="../Resources/css/Style.css"> <!-- Incluye el archivo CSS -->
-    <script src="../Resources/JS/appdash.js" defer></script> <!-- Incluye el script JS modificado -->
+    <link rel="stylesheet" href="../../Resources/css/Style.css"> <!-- Incluye el archivo CSS -->
+    <script src="../../Resources/JS/appdash.js" defer></script> <!-- Incluye el script JS modificado -->
 </head>
 <body>
     <div class="sidebar" id="sidebar"> <!-- Barra lateral -->
@@ -47,8 +47,7 @@ $conn->close(); // Cierra la conexión a la base de datos
             <a href="usuarios.php">Usuarios</a> <!-- Enlace a la página de usuarios -->
             <a href="Programas.php">Programas</a> <!-- Enlace a la página de programas -->
             <a href="donaciones.php">Donaciones</a> <!-- Enlace a la página de donaciones -->
-            <a href="#">Informes</a> <!-- Enlace a la página de informes -->
-            <a href="Logout.php" class="logout-btn">Cerrar Sesión</a> <!-- Enlace para cerrar sesión -->
+            <a href="../Login/Logout.php" class="logout-btn">Cerrar Sesión</a> <!-- Enlace para cerrar sesión -->
         </div>
     </div>
 

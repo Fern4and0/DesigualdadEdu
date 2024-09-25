@@ -1,6 +1,6 @@
 <?php
 // Incluye el archivo de conexión a la base de datos
-include '../DB/db.php'; 
+include '../../DB/db.php'; 
 
 // Verifica si la solicitud se realizó mediante el método POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ejecuta la consulta y verifica si se realizó correctamente
     if ($conn->query($sql) === TRUE) {
         // Redirige al usuario al dashboard si la actualización fue exitosa
-        header('Location: dashboard.php');
+        header('Location: Usuarios.php');
     } else {
         // Muestra un mensaje de error si la actualización falló
         echo "Error actualizando usuario: " . $conn->error;

@@ -1,6 +1,6 @@
 <?php
 // Incluimos el archivo de conexión a la base de datos
-include '../DB/db.php'; 
+include '../../DB/db.php'; 
 
 // Obtenemos el ID del usuario desde los parámetros de la URL
 $id = $_GET['id'];

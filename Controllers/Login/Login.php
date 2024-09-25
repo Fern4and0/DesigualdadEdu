@@ -3,7 +3,7 @@
 
 session_start(); // Iniciamos la sesión
 
-include '../DB/DB.php'; // Incluimos la conexión a la base de datos
+include '../../DB/DB.php'; // Incluimos la conexión a la base de datos
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verificamos si la solicitud es de tipo POST
     $email = $_POST['email']; // Obtenemos el email del formulario
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verificamos si la solicitud es de
             $_SESSION['user_rol'] = $user['id_rol']; // Guardamos el rol del usuario en la sesión
 
             // Redirigir al dashboard
-            header("Location: Dashboard.php"); // Redirigimos al usuario al dashboard
+            header("Location: ../Dashboard/Dashboard.php"); // Redirigimos al usuario al dashboard
             exit(); // Terminamos la ejecución del script
         } else {
             $error = "Contraseña incorrecta."; // Mensaje de error si el password no coincide
