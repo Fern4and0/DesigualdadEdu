@@ -1,9 +1,20 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+document.getElementById('formularioRegistro').addEventListener('submit', function(event) {
+    var nombre = document.getElementById('nombre').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
 
-    if (!email || !password) {
-        alert('Por favor, complete todos los campos.');
-        event.preventDefault(); // Evita el envío del formulario
+    if (nombre === "" || email === "" || password === "") {
+        alert("Por favor, rellena todos los campos.");
+        event.preventDefault(); // Previene el envío del formulario
+    }
+});
+
+document.getElementById('formularioLogin').addEventListener('submit', function(event) {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    if (email === "" || password === "") {
+        alert("Por favor, rellena todos los campos.");
+        event.preventDefault(); // Previene el envío del formulario
     }
 });
