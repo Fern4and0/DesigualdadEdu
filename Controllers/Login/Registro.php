@@ -2,11 +2,8 @@
 // Controllers/Registro.php
 
 // Incluimos la conexión a la base de datos
-<<<<<<<< HEAD:Controllers/Login/Registro.php
 include '../../DB/DB.php';
-========
 include '../DB/DB.php';
->>>>>>>> 2c6297d83461c27016f36db51095c5a72b678c42:Controllers/Registro.php
 
 // Verificamos si el método de la solicitud es POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
